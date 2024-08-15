@@ -1,0 +1,43 @@
+
+// Modo Oscuro
+.dark-mode {
+    background: #202020;
+
+    &h1, h2, h3, h4, h5, h6, p, a, span, ul, li, .h-h-title, button{
+        color: white; // Heredar el color definido en el cuerpo
+    }
+    .menuGetUp{
+        background-color: #202020;
+    }
+    .svg-menu{
+        filter: invert(1);
+    }
+    .svg-arrow{
+        filter: invert(1);
+    }
+    .svg-close{
+        filter: invert(1);
+    }
+}
+
+.light-mode {
+    background: #fff;
+
+    &h1, h2, h3, h4, h5, h6, p, a, span, ul, li, .h-h-title, button{
+        color: black; // Heredar el color definido en el cuerpo
+    }
+
+    .menuGetUp{
+        background: #fff;
+    }
+
+    .svg-menu{
+        filter: invert(0);
+    }
+    .svg-arrow{
+        filter: invert(0);
+    }
+    .svg-close{
+        filter: invert(0);
+    }
+}

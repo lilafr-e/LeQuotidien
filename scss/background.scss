@@ -1,0 +1,38 @@
+  .background-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.1);
+    // background-color: red;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+  }
+  
+  .background-text::before {
+    content: "Le quotidien, The Daily, El diario, Der Alltag, Il Quotidiano, Diário, 日报, 일상,  اليومية, Het Dagblad";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 10vw;
+    text-align: center;
+    z-index: -1;
+    white-space: nowrap;
+    line-height: 1.5;
+    transform: rotate(-45deg);
+    opacity: 0.2;
+  }
+  
+  .background-text p {
+    font-size: 3rem;
+    color: #333;
+    position: relative;
+    z-index: 1;
+  }

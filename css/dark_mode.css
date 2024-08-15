@@ -1,0 +1,39 @@
+.dark-mode {
+  background: #202020;
+}
+.dark-modeh1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode a, .dark-mode span, .dark-mode ul, .dark-mode li, .dark-mode .h-h-title, .dark-mode button {
+  color: white;
+}
+.dark-mode .menuGetUp {
+  background-color: #202020;
+}
+.dark-mode .svg-menu {
+  filter: invert(1);
+}
+.dark-mode .svg-arrow {
+  filter: invert(1);
+}
+.dark-mode .svg-close {
+  filter: invert(1);
+}
+
+.light-mode {
+  background: #fff;
+}
+.light-modeh1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6, .light-mode p, .light-mode a, .light-mode span, .light-mode ul, .light-mode li, .light-mode .h-h-title, .light-mode button {
+  color: black;
+}
+.light-mode .menuGetUp {
+  background: #fff;
+}
+.light-mode .svg-menu {
+  filter: invert(0);
+}
+.light-mode .svg-arrow {
+  filter: invert(0);
+}
+.light-mode .svg-close {
+  filter: invert(0);
+}
+
+/*# sourceMappingURL=dark_mode.css.map */

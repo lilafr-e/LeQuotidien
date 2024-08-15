@@ -1,0 +1,41 @@
+@import 'fonts';
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h-h-title{
+    font-family: 'Angela Cindysttar', sans-serif;
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+}
+
+.header-timer strong{
+    font-weight: 300;
+}
+
+.icon-container > svg {
+    width: 30px;
+    height: 30px;
+}
+
+.div_svg-h1 {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    position: relative;
+}
+
+.icon-container {
+    position: absolute;
+    left: 0px; 
+}
+
+.title-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}

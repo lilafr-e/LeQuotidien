@@ -1,0 +1,13 @@
+.button-Menu{
+    width: 40px;
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-ul li a span {
+    position: fixed;
+    right: 2em;
+    transform: rotate(90deg) translate(0px, 0px);
+}
+

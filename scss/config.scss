@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
+
+:root{
+    --title-font: 'Oswald', sans-serif;
+    --title-sizing: auto;
+    --title-weight: 700;
+    --title-style: normal;
+    --border-color: rgba(128, 128, 128, 0.253);
+    --linea-color: 1px solid rgb(158 158 158);
+    --padding-25: 25px;
+}
+
+.header-timer{
+    font-family: var(--title-font);
+    font-size: var(--title-sizing);
+    font-weight: 300;
+    font-style: var(--title-style);
+    text-align: center;
+    font-size: 1rem;
+    border: var(--linea-color);
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    padding: var(--padding-25);
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-timer::before{
+    content: "";
+    width: 100%;
+    position: relative;
+    border-bottom: var(--linea-color);
+    transform: translate(0px, 3.5em);
+}
+
+button#darkModeBtn{
+    margin-top: 8px;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+}
+
+main{
+    margin-top: 3vh;
+    height: fit-content;
+}
+
+body{
+    backdrop-filter: blur(10px);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h2.article-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
