@@ -30,9 +30,10 @@
 .header-timer::before {
   content: "";
   width: 100%;
-  position: relative;
+  position: absolute;
   border-bottom: var(--linea-color);
   transform: translate(0px, 3.5em);
+  bottom: 0px;
 }
 
 button#darkModeBtn {
@@ -48,6 +49,7 @@ main {
 }
 
 body {
+  margin: 0px;
   backdrop-filter: blur(10px);
   transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -61,6 +63,7 @@ h2.article-title {
   font-family: "Oswald", sans-serif;
   font-weight: 200;
   letter-spacing: 2px;
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=config.css.map */

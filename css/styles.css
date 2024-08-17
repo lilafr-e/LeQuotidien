@@ -31,9 +31,10 @@
 .header-timer::before {
   content: "";
   width: 100%;
-  position: relative;
+  position: absolute;
   border-bottom: var(--linea-color);
   transform: translate(0px, 3.5em);
+  bottom: 0px;
 }
 
 button#darkModeBtn {
@@ -49,6 +50,7 @@ main {
 }
 
 body {
+  margin: 0px;
   backdrop-filter: blur(10px);
   transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -62,12 +64,13 @@ h2.article-title {
   font-family: "Oswald", sans-serif;
   font-weight: 200;
   letter-spacing: 2px;
+  margin-top: 0px;
 }
 
 @media (min-width: 320px) and (max-width: 755px) {
   main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
   nav {
@@ -80,8 +83,7 @@ h2.article-title {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vh;
-    width: 100%;
+    height: fit-content;
     font-family: "Oswald", sans-serif;
     font-weight: 100;
     font-size: 1.5rem;
@@ -90,28 +92,24 @@ h2.article-title {
     margin-right: 20px;
     height: fit-content;
     width: 100%;
+    max-width: 90vw;
     padding: 30px 0px 30px 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.178);
   }
   nav ul li a {
-    color: #555;
     text-decoration: none;
+    width: 100%;
   }
   nav ul li a:focus {
     border-radius: 4px;
     display: block;
     height: max-content;
   }
-  /* Dropdown styles */
   nav ul li ul {
     display: none;
-    position: absolute;
     background-color: white;
     list-style: none;
     margin: 0;
-  }
-  nav ul li:hover ul {
-    display: block;
   }
   nav ul li ul li {
     margin: 0;
@@ -120,15 +118,22 @@ h2.article-title {
     display: block;
   }
   .menuGetUp {
-    height: 100%;
-    max-height: fit-content;
+    height: fit-content;
+    width: fit-content;
     width: -webkit-fill-available;
+    max-width: 50vw;
     position: fixed;
-    backdrop-filter: blur(4px);
-    top: 0px;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    padding: 0px 50px 0px 50px;
+    padding: 0 50px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    z-index: 1000;
+    overflow: auto;
+    padding-top: 1.3em;
   }
   .menuGetUp.nav-ul {
     flex-direction: column !important;
@@ -139,6 +144,57 @@ h2.article-title {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .icon-container {
+    display: none;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: fit-content;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+  }
+  nav ul li {
+    height: fit-content;
+  }
+  nav ul li a {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .nav-ul li a span {
+    right: 0em !important;
+    position: relative !important;
+  }
+  li#submenuExpand1 {
+    position: relative;
+  }
+  li#submenuExpand2 {
+    position: relative;
+  }
+  nav ul li a:focus {
+    border-radius: 4px;
+    display: block;
+    height: max-content;
+  }
+  nav ul li ul {
+    display: none;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+  }
+  nav ul li ul li {
+    margin: 0;
+  }
+  nav ul li ul li a {
+    display: block;
   }
 }
 @media (min-width: 1025px) {
@@ -233,8 +289,9 @@ h2.article-title {
 
 article {
   width: 100%;
+  height: fit-content;
   max-width: 369px;
-  max-height: 472px;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,6 +299,7 @@ article {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
+  border-bottom: 1px solid;
 }
 
 .article-title {
@@ -289,14 +347,21 @@ footer {
 }
 
 .h-h-title {
-  font-family: "Angela Cindysttar", sans-serif;
+  font-family: system-ui;
   text-align: center;
   font-size: 2.8rem;
   margin: 0px;
+  font-weight: lighter;
 }
 
 .header-timer strong {
   font-weight: 300;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .icon-container > svg {
@@ -319,7 +384,13 @@ footer {
 .title-container {
   flex: 1;
   display: flex;
+  padding-top: 18px;
   justify-content: center;
+}
+
+#climate {
+  padding-left: 0.5em;
+  text-align: right;
 }
 
 .button-Menu {
@@ -330,9 +401,32 @@ footer {
 }
 
 .nav-ul li a span {
-  position: fixed;
-  right: 2em;
   transform: rotate(90deg) translate(0px, 0px);
+  position: absolute;
+  right: 2em;
+}
+
+li > a:hover {
+  text-decoration: underline;
+}
+
+ul ul {
+  display: none;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul li.active > ul {
+  display: block;
+  height: fit-content;
+}
+
+span {
+  transition: transform 0.3s ease !important;
+}
+
+span.spanMenuRotate {
+  transform: rotate(270deg) translate(0px, 0px) !important;
 }
 
 .background-text {

@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-    <script src="js/articles.js"></script>
-    <script src="js/climate.js"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js"></script>
+    <script src="../js/articles.js"></script>
     <title>Le Quotidien</title>
 </head>
 
@@ -24,16 +21,13 @@
                 </button>
             </div>
             <div class="title-container">
-                <h1 class="h-h-title"><a href="index.html">le_quotidien</a></h1>
+                <h1 class="h-h-title"><a href="../index.html">Le Quotidien</a></h1>
             </div>
         </div>
 
         <p class="header-timer">
-            <strong>
-                <time datetime="2024-08-14">14 de Agosto de 2024</time>
-                <span id="hour">Hora Actual:</span>
-                <span id="climate"></span>
-            </strong>
+            <strong><time datetime="2024-08-14">14 de Agosto de 2024</time> | Hora Actual: <span
+                    id="hour"></span></strong>
             <button id="darkModeBtn"></button>
         </p>
         <div id="overlay"></div>
@@ -41,37 +35,30 @@
     <nav id="navMenu">
         <div class="icon-container">
             <button class="button-Menu" id="close">
-                <svg class="svg-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px">
+                <svg class="svg-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
                     <path
                         d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                 </svg>
             </button>
         </div>
         <ul class="nav-ul">
-            <li><a href="#hour">INICIO</a></li>
+            <li><a href="../general.html">INICIO</a></li>
             <li id="submenuExpand1">
-                <a href="./pages/urgente.html">URGENTE <span><svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg"
-                            height="24px" viewBox="0 -960 960 960" width="24px">
-                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                        </svg></span></a>
+                <a href="./pages/urgente.html">URGENTE <span><svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></span></a>
                 <ul>
                     <li><a href="#">Noticias de Última Hora</a></li>
                     <li><a href="#">Actualizaciones en Vivo</a></li>
                 </ul>
             </li>
             <li id="submenuExpand2">
-                <a href="./pages/world.html">MUNDO <span><svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg"
-                            height="24px" viewBox="0 -960 960 960" width="24px">
-                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                        </svg></span></a>
+                <a href="./world.html">MUNDO <span><svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></span></a>
                 <ul>
                     <li><a href="#">América</a></li>
                     <li><a href="#">Europa</a></li>
                     <li><a href="#">Asia</a></li>
                 </ul>
             </li>
-            <li><a href="./pages/technology.html">TECNOLOGÍA</a></li>
+            <li><a href="./technology.html">TECNOLOGÍA</a></li>
             <li><a href="#">DEPORTES</a></li>
             <li><a href="#">ENTRETENIMIENTO</a></li>
             <li><a href="#">OPINIÓN</a></li>

@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width: 755px) {
     main {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -17,8 +17,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        height: 100vh;
-        width: 100%;
+        height: fit-content;
         font-family: "Oswald", sans-serif;
         font-weight: 100;
         font-size: 1.5rem;
@@ -28,14 +27,14 @@
         margin-right: 20px;
         height: fit-content;
         width: 100%;
+        max-width: 90vw;
         padding: 30px 0px 30px 0px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.178);
     }
 
     nav ul li a {
-        color: #555;
         text-decoration: none;
-        // padding: 5px 10px;
+        width: 100%;
     }
 
     nav ul li a:focus {
@@ -44,17 +43,11 @@
         height: max-content;
     }
 
-    /* Dropdown styles */
     nav ul li ul {
         display: none;
-        position: absolute;
         background-color: #ffff;
         list-style: none;
         margin: 0;
-    }
-
-    nav ul li:hover ul {
-        display: block;
     }
 
     nav ul li ul li {
@@ -67,15 +60,23 @@
     }
 
     .menuGetUp {
-        height: 100%;
-        max-height: fit-content;
+        height: fit-content;
+        width: fit-content;
         width: -webkit-fill-available;
+        max-width: 50vw;
         position: fixed;
-        backdrop-filter: blur(4px);
-        top: 0px;
+        top: 0;
+        left: 0;
         display: flex;
         flex-direction: column;
-        padding: 0px 50px 0px 50px;
+        padding: 0 50px;
+        border: 1px solid black;
+        border-top: none;
+        border-left: none;
+        z-index: 1000;
+        overflow: auto;
+        padding-top: 1.3em;
+        
 
         &.nav-ul {
             flex-direction: column !important;
@@ -90,6 +91,67 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .icon-container{
+        display: none;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: fit-content;
+        font-family: "Oswald", sans-serif;
+        font-weight: 200;
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        height: fit-content;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .nav-ul li a span{
+        right: 0em !important;
+        position: relative !important;
+    }
+
+    li#submenuExpand1 {
+        position: relative;
+    }
+    li#submenuExpand2 {
+        position: relative;
+    }
+
+    nav ul li a:focus {
+        border-radius: 4px;
+        display: block;
+        height: max-content;
+    }
+
+    nav ul li ul {
+        display: none;
+        background-color: #ffff;
+        list-style: none;
+        margin: 0;
+    }
+
+    nav ul li ul li {
+        margin: 0;
+    }
+
+    nav ul li ul li a {
+        // padding: 10px;
+        display: block;
     }
 }
 

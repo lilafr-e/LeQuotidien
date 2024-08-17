@@ -9,5 +9,13 @@ Comenzado 14-08-24
 
 
 
--- Desarrollado con metología MobileFirst
--- Uso de SCSS
+-- Desarrollado con metología MobileFirst (Se desarrolla primero para dispositivos mobiles y por último se adapta a escritorio)
+-- Api de noticias : https://open-platform.theguardian.com/documentation/
+-- Api de DeepL : https://developers.deepl.com/docs
+-- Api de clima : https://open-meteo.com/en/docs
+
+
+
+
+
+Se llama a la API de noticias, los articulos se traducen con la API de DeepL y se muestran finalmente en el HTML, también se muestra la hora y clima (Temperatura de la localización actual).

@@ -11,14 +11,21 @@
 }
 
 .h-h-title {
-  font-family: "Angela Cindysttar", sans-serif;
+  font-family: system-ui;
   text-align: center;
   font-size: 2.8rem;
   margin: 0px;
+  font-weight: lighter;
 }
 
 .header-timer strong {
   font-weight: 300;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .icon-container > svg {
@@ -41,7 +48,13 @@
 .title-container {
   flex: 1;
   display: flex;
+  padding-top: 18px;
   justify-content: center;
+}
+
+#climate {
+  padding-left: 0.5em;
+  text-align: right;
 }
 
 /*# sourceMappingURL=header.css.map */
