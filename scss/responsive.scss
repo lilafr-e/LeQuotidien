@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 755px) {
+@media (min-width: 160px) and (max-width: 755px) {
     main {
         display: flex;
         flex-direction: column-reverse;
@@ -8,7 +8,6 @@
     nav {
         display: none;
     }
-
 
     nav ul {
         list-style: none;
@@ -76,7 +75,7 @@
         z-index: 1000;
         overflow: auto;
         padding-top: 1.3em;
-        
+
 
         &.nav-ul {
             flex-direction: column !important;
@@ -92,10 +91,11 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-    .icon-container{
+
+    .icon-container {
         display: none;
     }
-    
+
     nav ul {
         list-style: none;
         padding: 0;
@@ -120,7 +120,7 @@
         justify-content: center;
     }
 
-    .nav-ul li a span{
+    .nav-ul li a span {
         right: 0em !important;
         position: relative !important;
     }
@@ -128,6 +128,7 @@
     li#submenuExpand1 {
         position: relative;
     }
+
     li#submenuExpand2 {
         position: relative;
     }

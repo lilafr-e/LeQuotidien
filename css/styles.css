@@ -67,7 +67,7 @@ h2.article-title {
   margin-top: 0px;
 }
 
-@media (min-width: 320px) and (max-width: 755px) {
+@media (min-width: 160px) and (max-width: 755px) {
   main {
     display: flex;
     flex-direction: column-reverse;
@@ -370,10 +370,11 @@ footer {
 }
 
 .div_svg-h1 {
-  display: flex;
-  align-items: center;
   width: 100%;
+  display: flex;
+  padding-top: 18px;
   position: relative;
+  align-items: center;
 }
 
 .icon-container {
@@ -384,7 +385,6 @@ footer {
 .title-container {
   flex: 1;
   display: flex;
-  padding-top: 18px;
   justify-content: center;
 }
 

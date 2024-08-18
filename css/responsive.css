@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 755px) {
+@media (min-width: 160px) and (max-width: 755px) {
   main {
     display: flex;
     flex-direction: column-reverse;
