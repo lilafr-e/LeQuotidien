@@ -8,7 +8,6 @@
 .nav-ul li a span {
     transform: rotate(90deg) translate(0px, 0px);
     position: absolute;
-    right: 2em;
 }
 
 li > a:hover{
@@ -23,7 +22,6 @@ ul ul {
 
 ul li.active > ul {
     display: block;
-    height: fit-content;
 }
 
 span {

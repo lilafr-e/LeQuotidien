@@ -31,6 +31,9 @@
     text-decoration: none;
     width: 100%;
   }
+  .nav-ul li a span {
+    right: 2em;
+  }
   nav ul li a:focus {
     border-radius: 4px;
     display: block;
@@ -38,7 +41,6 @@
   }
   nav ul li ul {
     display: none;
-    background-color: white;
     list-style: none;
     margin: 0;
   }
@@ -76,6 +78,20 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  article {
+    background: rgba(0, 0, 0, 0.0901960784);
+    border-radius: 5px;
+    margin: 5px;
+    border: none !important;
+  }
+  ul li.active > ul {
+    display: block;
+    width: -webkit-fill-available;
+    height: fit-content;
+    position: absolute;
+    backdrop-filter: blur(42px);
+    padding: 25px 0px 10px 0px;
+  }
   .icon-container {
     display: none;
   }
@@ -96,9 +112,10 @@
   nav ul li a {
     text-decoration: none;
     width: 100%;
+    height: -webkit-fill-available;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
   }
   .nav-ul li a span {
     right: 0em !important;
@@ -106,23 +123,55 @@
   }
   li#submenuExpand1 {
     position: relative;
+    height: 24px;
+    background: rgba(255, 0, 0, 0.5411764706);
+    border-radius: 2px 2px 2px 0px;
+    width: 100%;
+    max-width: 6em;
+  }
+  li#submenuExpand1 a {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+  }
+  li#submenuExpand1 ul {
+    position: absolute;
+    width: max-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 23em;
+    backdrop-filter: invert(1);
+    background: rgba(255, 0, 0, 0.5411764706);
   }
   li#submenuExpand2 {
     position: relative;
+    height: 24px;
+    background: rgba(255, 0, 0, 0.5411764706);
+    border-radius: 2px 2px 2px 0px;
+    width: 100%;
+    max-width: 6em;
+  }
+  li#submenuExpand2 a {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+  }
+  li#submenuExpand2 ul {
+    max-width: 23em;
+    backdrop-filter: invert(1);
+    background: rgba(255, 0, 0, 0.5411764706);
   }
   nav ul li a:focus {
-    border-radius: 4px;
     display: block;
-    height: max-content;
   }
   nav ul li ul {
     display: none;
-    background-color: white;
     list-style: none;
     margin: 0;
   }
   nav ul li ul li {
     margin: 0;
+    margin-bottom: 10px;
   }
   nav ul li ul li a {
     display: block;
