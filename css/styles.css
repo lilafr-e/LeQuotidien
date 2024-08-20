@@ -10,6 +10,11 @@
   --padding-25: 25px;
 }
 
+.mx-w-1300 {
+  max-width: 1300px;
+  width: 100%;
+}
+
 .header-timer {
   font-family: var(--title-font);
   font-size: var(--title-sizing);
@@ -45,7 +50,6 @@ button#darkModeBtn {
 }
 
 main {
-  margin-top: 3vh;
   height: fit-content;
 }
 
@@ -67,7 +71,14 @@ h2.article-title {
   margin-top: 0px;
 }
 
+section {
+  margin-top: 5em;
+}
+
 @media (min-width: 160px) and (max-width: 755px) {
+  .publicidad {
+    display: none;
+  }
   main {
     display: flex;
     flex-direction: column-reverse;
@@ -141,7 +152,7 @@ h2.article-title {
     flex-direction: column !important;
   }
 }
-@media (min-width: 756px) and (max-width: 1024px) {
+@media (min-width: 755px) and (max-width: 1024px) {
   main {
     display: flex;
     flex-wrap: wrap;
@@ -161,6 +172,11 @@ h2.article-title {
     backdrop-filter: blur(42px);
     padding: 25px 0px 10px 0px;
   }
+  body {
+    border: 1px solid rgba(0, 0, 0, 0.178);
+  }
+}
+@media (min-width: 765px) {
   .icon-container {
     display: none;
   }
@@ -247,22 +263,48 @@ h2.article-title {
   }
 }
 @media (min-width: 1025px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1300px;
+    justify-content: space-around;
+  }
+  .publicidad {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 18em;
+    height: 18em;
+    background-color: aquamarine;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   a {
     display: block;
     width: fit-content;
   }
   main {
-    margin-top: -31px;
-    max-width: 70vw;
-    border-right: var(--linea-color);
+    max-width: 700px;
+    border: 1px solid var(--border-color);
     width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  nav {
+    max-width: 1300px;
+    width: 100%;
   }
   .h-h-title {
     font-size: 2.8rem !important;
   }
   article {
-    margin-top: 30px;
-    max-width: 900px !important;
+    max-width: 40em !important;
+    margin-top: 20px;
     max-height: fit-content !important;
   }
   .section-information {
@@ -348,7 +390,6 @@ article {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  border-bottom: 1px solid;
 }
 
 .article-title {

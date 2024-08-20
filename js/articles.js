@@ -33,10 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         articles.forEach(article => {
+            const textToTranslate = article.webTitle;
+
+            // Filtrar artículos que contengan "Corrections" o "Clarifications" en el título
+            if (
+                textToTranslate.includes("Correction") ||
+                textToTranslate.includes("For the record")||
+                textToTranslate.includes("Clarification")
+            ) {
+                return; // Saltar este artículo
+            }
+
             const deeplApiKey = 'a0c9d828-efa0-47d7-beb1-6a5c6f37e5d3:fx';
             const translateUrl = `https://api-free.deepl.com/v2/translate`;
 
-            const textToTranslate = article.webTitle;
             const imageUrl = article.fields && article.fields.thumbnail ? article.fields.thumbnail : placeholderImage;
 
             fetch(translateUrl, {
@@ -105,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <section class="section-information">
                             <h2 class="article-title">${textToTranslate}</h2>
                         </section>
-                        </a>
+                        <hr>
+                    </a>
                 `;
                 articleContainer.appendChild(articleElement);
             });
@@ -114,4 +125,5 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
         console.error('Error al obtener los datos:', error);
     });
+
 });

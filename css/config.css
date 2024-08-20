@@ -9,6 +9,11 @@
   --padding-25: 25px;
 }
 
+.mx-w-1300 {
+  max-width: 1300px;
+  width: 100%;
+}
+
 .header-timer {
   font-family: var(--title-font);
   font-size: var(--title-sizing);
@@ -44,7 +49,6 @@ button#darkModeBtn {
 }
 
 main {
-  margin-top: 3vh;
   height: fit-content;
 }
 
@@ -64,6 +68,10 @@ h2.article-title {
   font-weight: 200;
   letter-spacing: 2px;
   margin-top: 0px;
+}
+
+section {
+  margin-top: 5em;
 }
 
 /*# sourceMappingURL=config.css.map */
